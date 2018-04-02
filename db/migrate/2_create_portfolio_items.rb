@@ -1,4 +1,4 @@
-class CreatePortfolioItems < ActiveRecord::Migration
+class CreatePortfolioItems < ActiveRecord::Migration[4.2]
 
   def change
     create_table :refinery_portfolio_items do |t|

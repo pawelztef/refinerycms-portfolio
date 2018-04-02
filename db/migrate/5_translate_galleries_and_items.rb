@@ -1,4 +1,4 @@
-class TranslateGalleriesAndItems < ActiveRecord::Migration
+class TranslateGalleriesAndItems < ActiveRecord::Migration[4.2]
 
   def up
     ::Refinery::Portfolio::Gallery.reset_column_information

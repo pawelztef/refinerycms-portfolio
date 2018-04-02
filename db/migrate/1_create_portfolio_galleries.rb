@@ -1,4 +1,4 @@
-class CreatePortfolioGalleries < ActiveRecord::Migration
+class CreatePortfolioGalleries < ActiveRecord::Migration[4.2]
 
   def up
     create_table :refinery_portfolio_galleries do |t|
