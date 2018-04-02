@@ -2,7 +2,7 @@ module Refinery
   module Portfolio
     class GalleriesController < ::ApplicationController
 
-      before_filter :find_page
+      before_action :find_page
 
       def index
         @galleries = Gallery.roots

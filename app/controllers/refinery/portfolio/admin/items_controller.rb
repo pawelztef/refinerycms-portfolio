@@ -6,7 +6,7 @@ module Refinery
 
         crudify :'refinery/portfolio/item', :order => 'position ASC'
 
-        before_filter :find_gallery, :only => [:index]
+        before_action :find_gallery, :only => [:index]
 
         def index
           if params[:orphaned]
