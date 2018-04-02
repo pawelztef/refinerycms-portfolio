@@ -1,4 +1,4 @@
-class TranslateSlugToGallery < ActiveRecord::Migration
+class TranslateSlugToGallery < ActiveRecord::Migration[4.2]
   def up
     Refinery::Portfolio::Gallery.add_translation_fields! slug: :string
   end

@@ -1,4 +1,4 @@
-class RemoveCoverImageIdFromGalleries < ActiveRecord::Migration
+class RemoveCoverImageIdFromGalleries < ActiveRecord::Migration[4.2]
 
   def up
     remove_column :refinery_portfolio_galleries, :cover_image_id
