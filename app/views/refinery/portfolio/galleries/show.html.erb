@@ -1,0 +1,9 @@
+<h2><%= @gallery.title %></h2>
+<div id="<%= dom_id(@gallery) %>" class="gallery">
+  <%= render 'refinery/portfolio/items/slick', :items => @items %>
+  <div class="details">
+    <% if ::Refinery::Portfolio.display_gallery_text %>
+      <%= raw @gallery.body %>
+    <% end %>
+  </div>
+</div>
