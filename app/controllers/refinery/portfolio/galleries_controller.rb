@@ -15,8 +15,6 @@ module Refinery
         @galleries = @gallery.children
         @items = @gallery.items
         present(@page)
-
-        render :action => "index"
       end
 
       protected
