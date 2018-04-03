@@ -2,7 +2,7 @@ module Refinery
   module Portfolio
     class GalleriesController < ::ApplicationController
 
-      before_filter :find_page
+      before_action :find_page
 
       def index
         @galleries = Gallery.roots
@@ -15,8 +15,6 @@ module Refinery
         @galleries = @gallery.children
         @items = @gallery.items
         present(@page)
-
-        render :action => "index"
       end
 
       protected

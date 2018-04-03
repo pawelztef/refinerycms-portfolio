@@ -11,6 +11,16 @@ module Refinery
       rake("refinery_portfolio:install:migrations")
     end
 
+    def append_assets_to_precompile
+      append_file 'config/initializers/assets.rb', :verbose => true do
+        <<-EOH
+
+# Added by Refinery CMS Portfolio Engine Pawelztef fork
+Rails.application.config.assets.precompile += %w( refinery/portfolio/admin/portfolio.js )
+        EOH
+      end
+    end
+
     def append_load_seed_data
       create_file 'db/seeds.rb' unless File.exists?(File.join(destination_root, 'db', 'seeds.rb'))
       append_file 'db/seeds.rb', :verbose => true do

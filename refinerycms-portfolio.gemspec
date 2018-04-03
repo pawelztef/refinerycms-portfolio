@@ -17,4 +17,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'globalize'
   s.add_dependency 'friendly_id'
   s.add_dependency 'friendly_id-globalize'
+
 end

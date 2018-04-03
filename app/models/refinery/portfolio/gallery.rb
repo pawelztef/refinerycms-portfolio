@@ -1,7 +1,7 @@
 module Refinery
   module Portfolio
     class Gallery < Refinery::Core::BaseModel
-      translates :title, :body, :slug
+      translates :title, :body, :excerpt, :slug
       extend FriendlyId
 
       acts_as_indexed :fields => [:title, :body]
@@ -14,13 +14,14 @@ module Refinery
       alias_attribute :description, :body
 
       validates :title, presence: true, uniqueness: true
+      validates :excerpt, presence: true
 
       after_save :bulk_update_associated_items
 
       # If title changes tell friendly_id to regenerate slug when
       # saving record
       def should_generate_new_friendly_id?
-        title_changed?
+        attribute_changed?(title)
       end
 
       def friendly_id_source
