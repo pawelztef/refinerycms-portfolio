@@ -15,6 +15,6 @@ if defined?(::Refinery::Page) && ::Refinery::Page.where(:link_url => url).empty?
     :menu_match => "^#{url}(\/|\/.+?|)$"
   )
   Refinery::Pages.default_parts.each do |default_page_part|
-    page.parts.create(:title => default_page_part, :body => nil, :excerpt => nil)
+    page.parts.create(:title => default_page_part, :body => nil)
   end
 end
