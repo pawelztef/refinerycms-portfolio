@@ -1,6 +1,6 @@
 class TranslateExcerpt < ActiveRecord::Migration[4.2]
   def up
-    Refinery::Portfolio::Gallery.add_translation_fields! excerpt: :string
+    Refinery::Portfolio::Gallery.add_translation_fields! excerpt: :text
   end
 
   def down
