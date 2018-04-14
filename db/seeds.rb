@@ -9,7 +9,7 @@ end
 url = Refinery::Portfolio.page_url
 if defined?(::Refinery::Page) && ::Refinery::Page.where(:link_url => url).empty?
   page = ::Refinery::Page.create(
-    :title => 'Portfolio',
+    :title => 'Porjects',
     :link_url => url,
     :deletable => false,
     :menu_match => "^#{url}(\/|\/.+?|)$"
